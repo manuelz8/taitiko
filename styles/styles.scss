@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+.header-top-bar{
+    color: #4D2A88;
+    background-color: #FFBE1B;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+
+    a{
+        color: #4D2A88;
+        font-weight: 500;
+    }
+
+    .lang-link{
+        padding: 0 10px;
+
+        &:first-of-type{
+            border-right: 1px solid #4D2A88;
+        }
+    }
+}

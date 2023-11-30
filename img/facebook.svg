@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="15px" viewBox="0 0 7 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>6685C080-5D02-4941-9CA0-3F339FCC37CC</title>
+    <defs>
+        <polygon id="path-1" points="0 0 6.876 0 6.876 15 0 15"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-731.000000, -9.000000)">
+            <g id="Facebook-icon" transform="translate(731.000000, 9.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M6.60016034,7.48609665 L4.55992208,7.48609665 L4.55992208,15.0002101 L1.46996067,15.0002101 L1.46996067,7.48609665 L-0.000487595352,7.48609665 L-0.000487595352,4.84481012 L1.46996067,4.84481012 L1.46996067,3.13578356 C1.46996067,1.91424983 2.04671632,0 4.58778467,0 L6.876,0.00980589007 L6.876,2.57334572 L5.21608611,2.57334572 C4.94303271,2.57334572 4.55992208,2.71062818 4.55992208,3.2926778 L4.55992208,4.84691138 L6.87112405,4.84691138 L6.60016034,7.48609665 Z" id="Fill-1" fill="#4739AC" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
