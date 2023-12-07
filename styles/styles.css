@@ -55,6 +55,11 @@ a:hover {
   border-right: 1px solid #4D2A88;
 }
 
+.main-header {
+  position: relative;
+  border-bottom: 1px solid #B7F5FE;
+}
+
 .header-bottom-bar {
   background-color: #0F0840;
 }
@@ -360,4 +365,313 @@ a:hover {
 }
 .active-wallet .metamask-logo, .active-wallet .active-wallet-coins {
   transform: skew(10deg);
+}
+
+/* Marketplace */
+.marketplace-page {
+  background-color: #190F5E;
+}
+.marketplace-page .main-header {
+  z-index: -1;
+}
+.marketplace-page footer {
+  margin-top: 200px;
+}
+
+.marketplace-shape {
+  position: absolute;
+  left: 0;
+  top: 66px;
+  width: 100%;
+}
+
+.marketplace-phrase {
+  width: 100%;
+  position: absolute;
+  top: 66px;
+  left: 30%;
+  max-width: 527px;
+}
+
+.marketplace-header {
+  padding-top: 66px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.41);
+  z-index: 10;
+}
+.marketplace-header .market-r {
+  color: white;
+}
+.marketplace-header .market-r .qtity-label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+.marketplace-header .market-r .qtity-selector {
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 13px;
+  min-width: 45px;
+  text-align: center;
+}
+.marketplace-header .market-r .qtity-selector.active {
+  background-color: #B7F5FE;
+  color: #190F5E;
+}
+.marketplace-header .market-r .filter-by {
+  margin-left: 29px;
+  border: 1px solid #B7F5FE;
+  min-height: 32px;
+  max-width: 127px;
+  width: 100%;
+  padding: 0 5px;
+}
+.marketplace-header .market-r span {
+  font-weight: 500;
+  color: white;
+}
+
+.market-l {
+  max-width: 261px;
+  width: 100%;
+}
+.market-l .advance-filter-switch {
+  border: 1px solid #B7F5FE;
+  height: 32px;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.market-l .advance-filter-switch span {
+  color: #B7F5FE;
+}
+.market-l .applied-filters {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.41);
+  color: white;
+  padding-bottom: 20px;
+}
+.market-l .applied-filters a {
+  color: #B7F5FE;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.market-r {
+  max-width: calc(100% - 261px);
+  width: 100%;
+  margin-left: 20px;
+}
+
+.marketplace-body .market-characters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  row-gap: 100px;
+  padding-top: 90px;
+}
+.marketplace-body .market-l {
+  padding-top: 45px;
+}
+
+.taitiko-c {
+  max-height: 325px;
+  height: 100%;
+}
+.taitiko-c .character-img {
+  margin-top: -40px;
+  height: 347px;
+}
+.taitiko-c .character-price {
+  background-color: #342678;
+  padding: 15px 10px;
+}
+.taitiko-c .character-price .price-label {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+.taitiko-c .character-price .money-detail img {
+  width: 26px;
+  margin-right: 8px;
+}
+.taitiko-c .character-price .money-detail .current-price {
+  color: #FFBE1B;
+  font-size: 24px;
+  margin: 0 5px 0 0;
+}
+.taitiko-c .character-price .money-detail .currency {
+  font-size: 14px;
+  color: #FFBE1B;
+  margin: 0;
+  font-weight: 500;
+}
+.taitiko-c .character-bg {
+  border-radius: 30px 8px 0 0;
+  position: relative;
+  background-size: cover;
+}
+.taitiko-c .character-bg .character-name {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px 10px;
+}
+.taitiko-c .character-bg .character-name h2 {
+  margin: 0;
+}
+.taitiko-c .character-bg .character-name .character-details {
+  color: white;
+}
+.taitiko-c .character-bg .character-name .character-details .character-type {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.taitiko-c .character-bg .character-name .character-details .character-health img {
+  width: 16px;
+  margin-right: 5px;
+}
+.taitiko-c .character-bg .character-name .character-details .character-health .character-health-amount {
+  width: 15px;
+  color: white;
+}
+.taitiko-c.rare .character-bg {
+  background-image: url(../img/rare-bg.svg);
+  background-size: cover;
+}
+.taitiko-c.rare .character-bg .character-name {
+  background-image: linear-gradient(180deg, rgba(48, 34, 217, 0.69) 0%, #0081F2 100%);
+}
+.taitiko-c.rare .character-bg .character-name h2 {
+  color: #C5F8FF;
+  margin: 0;
+}
+.taitiko-c.legendary .character-bg {
+  background-image: url(../img/legendary-bg.svg);
+}
+.taitiko-c.legendary .character-bg .character-name {
+  background-image: linear-gradient(180deg, rgba(161, 105, 21, 0.69) 0%, #E8B71C 100%);
+}
+.taitiko-c.legendary .character-bg .character-name h2 {
+  color: #C5F8FF;
+}
+.taitiko-c.common .character-bg {
+  background-image: url(../img/common-bg.svg);
+}
+.taitiko-c.common .character-bg .character-name {
+  background-image: linear-gradient(180deg, rgba(5, 141, 7, 0.69) 0%, #2DF096 100%);
+}
+.taitiko-c.common .character-bg .character-name h2 {
+  color: #C5F8FF;
+}
+.taitiko-c.common-2 .character-bg {
+  background-image: url(../img/common-2-bg.svg);
+}
+.taitiko-c.common-2 .character-bg .character-name {
+  background-image: linear-gradient(180deg, rgba(59, 30, 199, 0.77) 0%, #5740C8 100%);
+}
+.taitiko-c.common-2 .character-bg .character-name h2 {
+  color: #C5F8FF;
+}
+.taitiko-c.epic .character-bg {
+  background-image: url(../img/epic-bg.svg);
+}
+.taitiko-c.epic .character-bg .character-name {
+  background-image: linear-gradient(180deg, rgba(196, 34, 217, 0.69) 0%, #AF20FF 100%);
+}
+.taitiko-c.epic .character-bg .character-name h2 {
+  color: #C5F8FF;
+}
+
+/* Range Input */
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --gradient-color: linear-gradient(95deg,
+                  hsl(286, 97%, 57%) -7%,
+                  hsl(256, 84%, 48%) 112%);
+  --first-color-light: hsl(256, 64%, 88%);
+  --first-color-lighten: hsl(256, 58%, 94%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(256, 100%, 98%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --h1-font-size: 1.5rem;
+}
+
+.marketplace-body {
+  /* Value input range */
+  /* Default input range */
+}
+.marketplace-body .range {
+  height: 64px;
+  width: 100%;
+  display: grid;
+}
+.marketplace-body .range__content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.marketplace-body .range__slider {
+  width: 100%;
+  height: 6px;
+  background-color: var(--first-color-lighten);
+  border-radius: 4rem;
+  box-shadow: 0 4px 12px hsla(256, 72%, 24%, 0.2);
+  overflow: hidden;
+}
+.marketplace-body .range__slider-line {
+  width: 100%;
+  height: 100%;
+  background: #B7F5FE;
+  width: 0;
+}
+.marketplace-body .range__thumb {
+  width: 32px;
+  height: 32px;
+  background-color: var(--first-color-lighten);
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsla(256, 72%, 24%, 0.2);
+  position: absolute;
+}
+.marketplace-body .range__value {
+  width: 60px;
+  background: white;
+  position: absolute;
+  top: -33px;
+  left: -30px;
+  display: grid;
+  place-items: center;
+}
+.marketplace-body .range__value-number {
+  color: #4739AC;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.marketplace-body .range__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  opacity: 0;
+}
+.marketplace-body .range__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 32px;
+  height: 32px;
+}
+.marketplace-body .range__input::-webkit-slider-thumb:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

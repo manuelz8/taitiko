@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="251px" height="274px" viewBox="0 0 251 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Common_BKGR 2@1x</title>
+    <defs>
+        <linearGradient x1="50%" y1="41.8915847%" x2="50%" y2="120.422831%" id="linearGradient-1">
+            <stop stop-color="#5840C8" offset="0%"></stop>
+            <stop stop-color="#26E10B" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="251" height="274"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BKGR_Celdas_LEGEND">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

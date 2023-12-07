@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bai+Jamjuree:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body class="marketplace-page">
+    <header class="main-header">
+        <div class="header-bottom-bar container-fluid d-flex justify-content-center">
+            <div class="container row justify-content-between">
+                <div class="col-2 d-flex py-3 justify-content-center">
+                    <img src="img/logo.svg" alt="Taitiko Logo" class="main-logo">
+                </div>
+                <nav class="col-7 d-flex justify-content-center">
+                    <ul class="main-menu-list d-flex justify-content-center align-items-center">
+                        <li class="main-menu-list__item active">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="main-menu-list__item">
+                            <a href="/">Market</a>
+                        </li>
+                        <li class="main-menu-list__item">
+                            <a href="/">My Collection</a>
+                        </li>
+                        <li class="main-menu-list__item">
+                            <a href="/">Capsules</a>
+                        </li>
+                        <li class="main-menu-list__item">
+                            <a href="/">Battle Pass</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col-3 d-flex user-info justify-content-center align-items-center">
+                    <div class="active-wallet d-flex bai align-items-center">
+                        <a href="#" class="metamask-logo d-flex align-items-center me-3"><img src="img/metamask.svg"
+                            alt="Metamask Logo" class="metamask-logo"></a>
+                        <div class="active-wallet-coins d-flex flex-column align-items-end">
+                            <span class="active-wallet-coin d-flex align-items-center">10.500 <img src="img/TTC.svg" class="ms-2" alt="Coin"></span>
+                            <span class="active-wallet-coin d-flex align-items-center">20.500 <img src="img/TTG.svg" class="ms-2" alt="Coin"></span>
+                        </div>
+                    </div>
+                    <a href="#" class="current-profile d-flex align-items-center me-2"><img src="img/Profile.svg"
+                            alt="Profile Image"></a>
+                    <div class="dropdown-menu-icon d-flex align-items-center"><img src="img/dropdown.png"
+                            alt="Dropdown Icon"></div>
+                </div>
+            </div>
+        </div>
+        <img src="img/marketplace-shape.png" alt="Marketplace Shape" class="marketplace-shape">
+        <img src="img/marketplace-phrase.svg" alt="Marketplace Phrase" class="marketplace-phrase">
+    </header>
+    <section class="marketplace-header container-fluid">
+        <div class="container d-flex justify-content-between">
+            <div class="market-l d-flex justify-content-start">
+                <div class="advance-filter-switch d-flex align-items-center justify-content-between bai">
+                    Advance Filter
+                    <span class="material-symbols-outlined switch-icon">
+                        tune
+                    </span>
+                </div>
+            </div>
+            <div class="market-r d-flex align-items-center justify-content-end">
+                <span class="qtity-label">View</span>
+                <span class="qtity-selector bai">25</span>
+                <span class="qtity-selector bai active">50</span>
+                <span class="filter-by d-flex align-items-center justify-content-between bai">Cheapest <span class="material-symbols-outlined">arrow_drop_down</span></span>
+            </div>
+        </div>
+    </section>
+    <section class="marketplace-body container d-flex">
+        <div class="market-l">
+            <div class="applied-filters bai d-flex justify-content-between align-items-center">
+                Applied Filters
+                <a class="clear-all">Clear All</a>
+            </div>
+            <div class="range">
+                <div class="range__content">
+                   <div class="range__slider">
+                      <div class="range__slider-line" id="range-line"></div>
+                   </div>
+                   
+                   <div class="range__thumb" id="range-thumb">
+                      <div class="range__value">
+                         <span class="range__value-number" id="range-number">50</span>
+                      </div>
+                   </div>
+       
+                   <input type="range" class="range__input" id="range-input" min="0" max="9999" value="5000" step="100">
+                </div>
+             </div>
+        </div>
+        <div class="market-r market-characters">
+            <div class="taitiko-c rare">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/mago.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>Wizard Sabroso</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">RARE</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">3.800</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c legendary">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/arthur.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>Arthur</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">LEGENDARY</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">5.900</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c common">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/filip.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>FILIP</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">Common</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">5.900</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c epic">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/samu.png" alt="Samu" class="character-img">
+                    <div class="character-name">
+                        <h2>SAMU</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">EPIC</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">2.500</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c common-2">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/filip.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>FILIP</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">Common</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">1.400</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c rare">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/mago.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>Wizard</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">RARE</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">3.800</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c rare">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/mago.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>Wizard Sabroso</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">RARE</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">3.800</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c legendary">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/arthur.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>Arthur</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">LEGENDARY</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">5.900</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c common">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/filip.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>FILIP</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">Common</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">5.900</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c epic">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/samu.png" alt="Samu" class="character-img">
+                    <div class="character-name">
+                        <h2>SAMU</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">EPIC</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">2.500</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c common-2">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/filip.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>FILIP</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">Common</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">1.400</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="taitiko-c rare">
+                <div class="character-bg d-flex align-items-center justify-content-center">
+                    <img src="img/mago.png" alt="Mago" class="character-img">
+                    <div class="character-name">
+                        <h2>Wizard</h2>
+                        <div class="character-details bai d-flex justify-content-between align-items-start">
+                            <span class="character-type">RARE</span>
+                            <div class="character-health">
+                                <img src="img/hearth.png" alt="Corazon">
+                                <span class="character-health-amount">9.999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-price d-flex align-items-center justify-content-between">
+                    <span class="price-label">Price</span>
+                    <div class="d-flex align-items-center money-detail bai">
+                        <img src="img/TTC.svg" alt="TTC">
+                        <div class="price d-flex align-items-end">
+                            <h3 class="current-price">3.800</h3>
+                            <p class="currency">TTC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="main-footer container-fluid">
+        <div class="main-footer-container container row justify-content-between">
+            <div class="col-2">
+                <img src="img/logo-footer.png" alt="Logo Footer" class="logo-footer">
+            </div>
+            <div class="col-10 footer-right">
+                <div class="footer-right-upper row justify-content-between">
+                    <nav class="col-3 footer-menu d-flex flex-column">
+                        <a href="#">Home</a>
+                        <a href="#">Marketplace</a>
+                        <a href="#">Blog</a>
+                        <a href="#">FAQ</a>
+                    </nav>
+                    <nav class="col-3 footer-menu d-flex flex-column">
+                        <a href="#">Battle Pass 1</a>
+                        <a href="#">Tokenomics</a>
+                        <a href="#">Team</a>
+                        <a href="#">Support</a>
+                    </nav>
+                    <nav class="col-3 footer-menu d-flex flex-column">
+                        <a href="#">About Taitiko</a>
+                        <a href="#">Whitepaper</a>
+                        <a href="#">Partners</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                    <div class="col-3 footer-social d-flex align-items-center flex-column">
+                        <p>Follow us & Stay tune!</p>
+                        <div class="d-flex justify-content-between social-icons">
+                            <a href="#" class="footer-social-icon"><img src="img/facebook-y.svg" alt="Facebook"></a>
+                            <a href="#" class="footer-social-icon"><img src="img/twitter-y.svg" alt="Facebook"></a>
+                            <a href="#" class="footer-social-icon"><img src="img/instagram-y.svg" alt="Facebook"></a>
+                            <a href="#" class="footer-social-icon"><img src="img/youtube-y.svg" alt="Facebook"></a>
+                            <a href="#" class="footer-social-icon"><img src="img/discord-y.svg" alt="Facebook"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right-lower row">
+                    <div class="col-6">
+                        <span class="d-flex footer-info">Community/Business Partnership: <a href="#">Email Us</a> / <a href="#">Sign Up</a></span>
+                        <span class="d-flex footer-info">Gaming guild application: <a href="#">Email Us</a> / <a href="#">Sign Up</a></span>
+                    </div>
+                    <div class="col-6">
+                        <span class="footer-info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
