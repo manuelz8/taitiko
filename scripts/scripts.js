@@ -28,3 +28,21 @@ const rangeInputSlider = () =>{
 }
 
 rangeInputSlider()
+
+
+$(function() {
+    var rango = $(".rango");
+    var barra = $(".barra");
+    var etiquetaIzquierda = $(".etiqueta-izquierda");
+    var etiquetaDerecha = $(".etiqueta-derecha");
+  
+    rango.on("input", function() {
+      var valorMinimo = rango.val();
+      var valorMaximo = barra.width() - valorMinimo;
+  
+      etiquetaIzquierda.text(valorMinimo);
+      etiquetaDerecha.text(valorMaximo);
+  
+      barra.css("width", valorMaximo);
+    });
+  });
